@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Custom Smooth Scrolling for Navigation Links */
+html {
+  scroll-behavior: smooth;
+  background-color: #0a0c10;
+  color-scheme: dark;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0c10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 2px solid #0a0c10;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4f46e5;
+}
+
+/* Glassmorphism Effect Fallback */
+.backdrop-blur-md {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* Image Hover Scale Animation Fix */
+.group img {
+  will-change: transform;
+}
+
