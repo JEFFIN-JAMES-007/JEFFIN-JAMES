@@ -52,123 +52,165 @@ const GlassIcon = ({
 // Tech Stack & Tool Icons (True-Color Glassmorphic SVGs)
 const Icons = {
   Premiere: () => (
-    <GlassIcon color="#ea77ff" glowColor="rgba(234, 119, 255, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#ea77ff]">
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.5c0 .8-.4 1.5-1.1 1.8V16H7v-8h2.5c1.4 0 2 1 2 2.3v1.2zm7.5 4.5h-1.4v-1c-.3.7-1 1.1-1.8 1.1-1.3 0-2.3-1.1-2.3-2.6V11h1.4v2.3c0 .8.4 1.3 1.1 1.3s1.2-.5 1.2-1.3V11H17v5zm-8.6-4.7c0-.7-.3-1.1-1-1.1H7.2v2.2H7.4c.7 0 1-.3 1-.1.1v-1z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/adobe-premiere-pro--v1.png"
+      alt="adobe-premiere-pro--v1"
+    />
+  ),
+  FinalCutPro: () => (
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/final-cut-pro-new.png"
+      alt="final-cut-pro-new"
+    />
+  ),
+  Davinchi: () => (
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/davinci-resolve.png"
+      alt="davinci-resolve"
+    />
   ),
   Photoshop: () => (
-    <GlassIcon color="#31a8ff" glowColor="rgba(49, 168, 255, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#31a8ff]">
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9.5 8.8c0 1.5-1 2.2-2.5 2.2H5.5V8h2.9c1.6 0 2.6.9 2.6 2.3v1.5zm7.5 4.2h-1.4v-.9c-.4.6-1.1 1-1.9 1-1.2 0-2.1-.8-2.1-2.1 0-1.5 1.1-2.2 2.8-2.2h1.2v-.3c0-.6-.4-1-1.1-1-.6 0-1.1.3-1.2.8h-1.3c.1-1.2 1.2-1.9 2.6-1.9 1.5 0 2.4.8 2.4 2.1V16zM7.1 9.3H6.8v3.3h.3c.9 0 1.4-.4 1.4-1.3v-.8c0-.8-.5-1.2-1.4-1.2z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/adobe-photoshop--v1.png"
+      alt="adobe-photoshop--v1"
+    />
   ),
   Illustrator: () => (
-    <GlassIcon color="#ff9a00" glowColor="rgba(255, 154, 0, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#ff9a00]">
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7.6 13h-1.5l-.5-1.8H6.6L6.1 16H4.7l2.8-8h1.7l2.2 8zm5.6 0h-1.4v-5.6h1.4V16zm0-6.8h-1.4V7.8h1.4v1.4zM8.3 10.1L7.3 13h1.9l-.9-2.9z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/adobe-illustrator--v1.png"
+      alt="adobe-illustrator--v1"
+    />
   ),
   Figma: () => (
-    <GlassIcon color="#a259ff" glowColor="rgba(162, 89, 255, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#a259ff]">
-        <path d="M12 12c0-1.66-1.34-3-3-3s-3 1.34-3 3 1.34 3 3 3 3-1.34 3-3zm0-6c0-1.66-1.34-3-3-3S6 4.34 6 6s1.34 3 3 3 3-1.34 3-3zm0 12c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3zm6-6c0-1.66-1.34-3-3-3s-3 1.34-3 3 1.34 3 3 3 3-1.34 3-3zm0-6c0-1.66-1.34-3-3-3s-3 1.34-3 3 1.34 3 3 3 3-1.34 3-3z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/figma--v1.png"
+      alt="figma--v1"
+    />
   ),
   HTML5: () => (
-    <GlassIcon color="#e34f26" glowColor="rgba(227, 79, 38, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#e34f26]">
-        <path d="M1.5 0h21l-1.91 21.563L11.97 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.236-2.679H5.414l.691 8.077h8.877l-.372 4.148-2.639.714-2.643-.718-.17-1.906H6.521l.338 4.229 5.11 1.41 5.119-1.41.688-7.668H8.531z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/html-5--v1.png"
+      alt="html-5--v1"
+    />
   ),
   CSS3: () => (
-    <GlassIcon color="#1572b6" glowColor="rgba(21, 114, 182, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#1572b6]">
-        <path d="M1.5 0h21l-1.91 21.563L11.97 24l-8.564-2.438L1.5 0zm14.195 11.125l.396-4.406H5.451l.235 2.679h7.458l-.232 2.613-2.942.793-2.946-.793-.187-2.083H4.152l.375 4.672 5.443 1.512 5.443-1.512.723-8.093H15.695z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/css3.png"
+      alt="css3"
+    />
   ),
   JavaScript: () => (
-    <GlassIcon color="#f7df1e" glowColor="rgba(247, 223, 30, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#f7df1e]">
-        <path d="M3 3h18v18H3V3zm11.525 14.34c.78 0 1.248-.37 1.642-.907.312-.424.437-.733.437-1.393v-3.793h1.724v3.896c0 1.157-.354 2.05-1.03 2.656-.782.704-1.872.936-3.03.936-1.488 0-2.585-.562-3.093-1.616l1.247-.732c.28.53.766.853 1.38.853zm-5.717-.238c.453.764 1.2 1.182 2.19 1.182 1.14 0 1.848-.562 1.848-1.42 0-.853-.515-1.233-1.577-1.693l-.547-.238c-1.563-.674-2.28-1.393-2.28-2.656 0-1.513 1.216-2.628 3.013-2.628 1.344 0 2.25.48 2.828 1.482l-1.2.764c-.36-.617-.852-.882-1.56-.882-.765 0-1.294.437-1.294 1.05 0 .647.39 1.01 1.36 1.428l.547.238c1.828.793 2.53 1.482 2.53 2.828 0 1.77-1.376 2.8-3.328 2.8-1.72 0-2.812-.662-3.39-1.838l1.25-.718z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/javascript--v1.png"
+      alt="javascript--v1"
+    />
+  ),
+  Python: () => (
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/python--v1.png"
+      alt="python--v1"
+    />
   ),
   React: () => (
-    <GlassIcon color="#61dafb" glowColor="rgba(97, 218, 251, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#61dafb]">
-        <path d="M12 9a3 3 0 100 6 3 3 0 000-6zm0-4.5c-4.97 0-9 1.79-9 4s4.03 4 9 4 9-1.79 9-4-4.03-4-9-4zm0 11c-4.97 0-9 1.79-9 4s4.03 4 9 4 9-1.79 9-4-4.03-4-9-4z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="64"
+      height="64"
+      src="https://img.icons8.com/nolan/64/react-native.png"
+      alt="react-native"
+    />
   ),
-  Sass: () => (
-    <GlassIcon color="#cc6699" glowColor="rgba(204, 102, 153, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#cc6699]">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z" />
-      </svg>
-    </GlassIcon>
-  ),
+
   Bootstrap: () => (
-    <GlassIcon color="#7952b3" glowColor="rgba(121, 82, 179, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#7952b3]">
-        <path d="M18.8 4H5.2C4.5 4 4 4.5 4 5.2v13.6c0 .7.5 1.2 1.2 1.2h13.6c.7 0 1.2-.5 1.2-1.2V5.2c0-.7-.5-1.2-1.2-1.2zM13.5 15.5c-1.2 0-2.1-.6-2.5-1.5v1.3H9V8.5h2v1.3c.4-.9 1.3-1.5 2.5-1.5 1.9 0 3.2 1.5 3.2 3.6s-1.3 3.6-3.2 3.6z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color-glass/48/bootstrap.png"
+      alt="bootstrap"
+    />
+  ),
+  Node: () => (
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/nodejs.png"
+      alt="nodejs"
+    />
   ),
   Git: () => (
-    <GlassIcon color="#f05032" glowColor="rgba(240, 80, 50, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#f05032]">
-        <path d="M21.5 11.5l-9-9c-.4-.4-1-.4-1.4 0l-1.8 1.8 2.3 2.3c.4-.1.9 0 1.2.3.5.5.5 1.3 0 1.8-.4.4-1.1.5-1.6.2l-2.2 2.2v2.8c.3.2.5.5.5.9 0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5c0-.6.4-1.1.9-1.4V9.6c-.5-.3-.9-.8-.9-1.4 0-.6.3-1.1.8-1.4L5.3 4.5l-2.8 2.8c-.4.4-.4 1 0 1.4l9 9c.4.4 1 .4 1.4 0l8.6-8.6c.4-.4.4-1 0-1.4z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/git.png"
+      alt="git"
+    />
   ),
   MongoDB: () => (
-    <GlassIcon color="#47a248" glowColor="rgba(71, 162, 72, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current text-[#47a248]">
-        <path d="M12 1.5c-1 4.5-5 8-5 12 0 3.3 2.2 6 5 6.5 2.8-.5 5-3.2 5-6.5 0-4-4-7.5-5-12zm0 16.5c-1.7 0-3-1.8-3-4 0-2.5 2-5.2 3-7.5 1 2.3 3 5 3 7.5 0 2.2-1.3 4-3 4z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/mongo-db.png"
+      alt="mongo-db"
+    />
   ),
   Instagram: () => (
-    <GlassIcon color="#e1306c" glowColor="rgba(225, 48, 108, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current text-[#e1306c]">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/fluency/48/instagram-new.png"
+      alt="instagram-new"
+    />
   ),
   Facebook: () => (
-    <GlassIcon color="#1877f2" glowColor="rgba(24, 119, 242, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current text-[#1877f2]">
-        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/fluency/48/facebook-new.png"
+      alt="facebook-new"
+    />
   ),
   WhatsApp: () => (
-    <GlassIcon color="#25d366" glowColor="rgba(37, 211, 102, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current text-[#25d366]">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/whatsapp--v1.png"
+      alt="whatsapp--v1"
+    />
   ),
   Behance: () => (
-    <GlassIcon color="#1769ff" glowColor="rgba(23, 105, 255, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current text-[#1769ff]">
-        <path d="M22 7h-7V5h7v2zm-1.708 6.113c.086.533.094.9.016 1.484-.258 1.9-1.789 3.003-3.808 3.003-2.617 0-4.3-1.812-4.3-4.39 0-2.483 1.702-4.412 4.195-4.412 2.41 0 3.844 1.625 3.844 4.09 0 .285-.023.633-.047.883l-5.906.002c.078.969.836 1.703 2.11 1.703.883 0 1.523-.398 1.766-1.125l2.13.762zm-3.836-3.141c-.82 0-1.445.539-1.602 1.344h3.18c-.063-.82-.695-1.344-1.578-1.344zM3 17h4.898c2.406 0 3.906-1.07 3.906-2.734 0-1.102-.625-1.922-1.688-2.281.828-.352 1.352-1.031 1.352-2.023 0-1.508-1.258-2.461-3.328-2.461H3V17zm2.438-7.852h1.969c.805 0 1.281.383 1.281.977 0 .617-.477.992-1.305.992H5.438V9.148zm0 5.437v-2.11h2.219c.922 0 1.453.43 1.453 1.055 0 .641-.531 1.055-1.484 1.055H5.438z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/behance.png"
+      alt="behance"
+    />
   ),
   LinkedIn: () => (
-    <GlassIcon color="#0077b5" glowColor="rgba(0, 119, 181, 0.35)">
-      <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current text-[#0077b5]">
-        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-      </svg>
-    </GlassIcon>
+    <img
+      width="48"
+      height="48"
+      src="https://img.icons8.com/fluency/48/linkedin.png"
+      alt="linkedin"
+    />
   ),
 };
 
@@ -683,6 +725,16 @@ export default function App() {
                         icon: <Icons.Premiere />,
                       },
                       {
+                        name: 'Final Cut Pro',
+                        desc: 'Video Editing',
+                        icon: <Icons.FinalCutPro />,
+                      },
+                      {
+                        name: 'Davinci Resolve',
+                        desc: 'Video Editing',
+                        icon: <Icons.Davinchi />,
+                      },
+                      {
                         name: 'Photoshop',
                         desc: 'Graphic Design',
                         icon: <Icons.Photoshop />,
@@ -726,10 +778,11 @@ export default function App() {
                     {[
                       { name: 'HTML5', icon: <Icons.HTML5 /> },
                       { name: 'CSS3', icon: <Icons.CSS3 /> },
-                      { name: 'Sass', icon: <Icons.Sass /> },
                       { name: 'JavaScript', icon: <Icons.JavaScript /> },
+                      { name: 'Python', icon: <Icons.Python /> },
                       { name: 'React', icon: <Icons.React /> },
                       { name: 'Bootstrap', icon: <Icons.Bootstrap /> },
+                      { name: 'NodeJs', icon: <Icons.Node /> },
                       { name: 'Git', icon: <Icons.Git /> },
                       { name: 'MongoDB', icon: <Icons.MongoDB /> },
                     ].map((tech, idx) => (
@@ -768,9 +821,8 @@ export default function App() {
                 ))}
               </div>
             </section>
-
             {/* SERVICES SECTION */}
-          <ServicesSection />
+            <ServicesSection />
 
             {/* CONTACT SECTION */}
             <section
