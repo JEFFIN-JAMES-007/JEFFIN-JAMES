@@ -8,7 +8,7 @@ import Home from './Pages/Home/home.jsx';
 import About from './Pages/About/about';
 import Skills from './Pages/Skills/skills';
 import Projects from './Pages/Projects/projects';
-import SerivesSection from './Pages/Services/services.jsx';
+import Services from './Pages/Services/services.jsx';
 import Contact from './Pages/Contact/contact';
 import HireMe from './Pages/HireMe/hireMe';
 import AllWorks from './Pages/AllWorks';
@@ -33,8 +33,8 @@ const MainLayout = () => {
               <Home />
               <About />
               <Skills />
-              <SerivesSection />
               <Projects />
+              <Services />
               <Contact />
             </>
           } 
@@ -44,7 +44,7 @@ const MainLayout = () => {
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/services" element={<SerivesSection />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/hire-me" element={<HireMe />} />
         <Route path="/all-works" element={<AllWorks />} />

@@ -44,7 +44,7 @@ const Services = () => {
       </div>
 
       <div className="services-grid">
-        {servicesData.map((service) => (
+        {servicesData.map(service => (
           <div key={service.id} className="service-card glass-card">
             {/* Animated Ambient Neon Aura */}
             <div className="neon-glow-aura" />
