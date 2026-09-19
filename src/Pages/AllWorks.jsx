@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import InfiniteSpiral from '../components/InfiniteSpiral';
-import './allWorks.css';
+import './allworks.css';
 
 const portfolioImages = [
   { src: '/images/Artboard.png', alt: 'Artboard 1' },
