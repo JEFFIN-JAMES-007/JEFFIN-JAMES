@@ -1,52 +1,134 @@
-/* PRICING PAGE (Hire Me) */
+/* =========================================================
+   💳 PRICING / HIRE ME STYLES
+   ========================================================= */
+
 .pricing-page {
-  padding: 150px 20px 100px;
+  /* Adjusted top padding so header text is visible at top right below navbar */
+  padding: 130px 20px 100px;
   min-height: 100vh;
   text-align: center;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
 }
+
+/* Header Styling (Moderate Heading Size) */
+.pricing-header {
+  margin-bottom: 45px;
+}
+
+.pricing-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem); /* Moderate, responsive heading size */
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #ffffff 0%, #d8b4fe 100%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .pricing-header p {
-  color: var(--text-muted);
-  margin: 10px 0 40px;
+  color: var(--text-muted, #a09eb1);
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 550px;
 }
+
 .pricing-cards {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 32px;
   flex-wrap: wrap;
+  align-items: stretch;
 }
+
+/* Card Styling */
 .price-card {
-  padding: 40px;
-  width: 300px;
+  padding: 40px 32px;
+  width: 320px;
   text-align: left;
   position: relative;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Smooth transition for hover effects */
+  transition:
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
+
+/* 🍇 Neon Purple Keyframe Pulse Animation */
+@keyframes neonPurpleGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(168, 85, 247, 0.5),
+      0 0 40px rgba(168, 85, 247, 0.3),
+      inset 0 0 15px rgba(168, 85, 247, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(168, 85, 247, 0.8),
+      0 0 60px rgba(168, 85, 247, 0.5),
+      inset 0 0 25px rgba(168, 85, 247, 0.25);
+  }
+}
+
+/* Neon Purple Hover Effect */
+.price-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: #a855f7; /* Vibrant neon purple border */
+  animation: neonPurpleGlow 2s infinite ease-in-out;
+}
+
 .pro-card {
-  border-color: var(--accent-purple);
-  box-shadow: 0 0 30px rgba(106, 53, 255, 0.2);
+  border-color: var(--accent-purple, #6a35ff);
+  box-shadow: 0 0 25px rgba(106, 53, 255, 0.25);
 }
+
 .popular-badge {
   position: absolute;
   top: -15px;
   right: 20px;
-  background: var(--accent-pink);
+  background: var(--accent-pink, #ff54a2);
   color: white;
-  padding: 5px 15px;
+  padding: 6px 16px;
   border-radius: 20px;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
+
 .price-card h3 {
-  color: var(--text-muted);
+  color: var(--text-muted, #a09eb1);
   font-size: 1.2rem;
+  font-weight: 600;
 }
+
 .price-card .price {
   font-size: 3rem;
+  font-weight: 800;
   margin: 15px 0;
+  color: #ffffff;
+  letter-spacing: -0.5px;
 }
+
 .price-card ul {
   list-style: none;
   margin-bottom: 30px;
+  padding: 0;
 }
+
 .price-card ul li {
   display: flex;
   align-items: center;
@@ -54,8 +136,26 @@
   margin-bottom: 15px;
   color: #d1d1d1;
   font-size: 14px;
+  line-height: 1.4;
 }
+
 .price-card button {
   width: 100%;
   justify-content: center;
+}
+
+/* --- WIDESCREEN & ULTRA-WIDE MONITOR RESPONSIVENESS --- */
+@media (min-width: 1400px) {
+  .pricing-page {
+    max-width: 1550px;
+  }
+  .pricing-cards {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-page {
+    padding-top: 110px;
+  }
 }

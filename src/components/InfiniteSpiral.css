@@ -1,15 +1,24 @@
+:root {
+  --infinite-spiral-card-width: 280px;
+  --infinite-spiral-card-height: 380px;
+  --infinite-spiral-card-radius: 18px;
+}
+
 .infinite-spiral {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 320px;
+  min-height: 100vh;
   overflow: hidden;
   isolation: isolate;
+  perspective: 1200px;
 }
 
 .infinite-spiral__stage {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   transform-style: preserve-3d;
 }
 
@@ -18,17 +27,30 @@
   top: 50%;
   left: 50%;
   display: block;
-  width: var(--infinite-spiral-card-width);
-  height: var(--infinite-spiral-card-height);
+  width: var(--infinite-spiral-card-width, 280px);
+  height: var(--infinite-spiral-card-height, 380px);
   overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 0.24);
-  border-radius: var(--infinite-spiral-card-radius);
-  background: rgb(255 255 255 / 0.08);
-  box-shadow: 0 14px 38px rgb(8 6 18 / 0.2);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.24));
+  border-radius: var(--infinite-spiral-card-radius, 18px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 
+    0 14px 38px rgba(8, 6, 18, 0.4),
+    0 0 20px rgba(106, 53, 255, 0.15);
   transform-style: preserve-3d;
   backface-visibility: hidden;
   will-change: transform, opacity, filter;
   text-decoration: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.infinite-spiral__item:hover {
+  border-color: var(--accent-purple, #6a35ff);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 20px 45px rgba(8, 6, 18, 0.6),
+    0 0 30px rgba(106, 53, 255, 0.4);
 }
 
 .infinite-spiral__image {
@@ -37,8 +59,68 @@
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   object-position: center;
   user-select: none;
+  pointer-events: none;
+}
+
+/* =========================================================
+   🖥️ WIDESCREEN & ULTRA-WIDE MONITOR RESPONSIVENESS
+   ========================================================= */
+
+/* --- 1440p MONITORS (min-width: 1400px) --- */
+@media (min-width: 1400px) {
+  :root {
+    --infinite-spiral-card-width: 320px;
+    --infinite-spiral-card-height: 440px;
+    --infinite-spiral-card-radius: 20px;
+  }
+
+  .infinite-spiral {
+    perspective: 1400px;
+  }
+}
+
+/* --- 4K & ULTRA-WIDE MONITORS (min-width: 1800px) --- */
+@media (min-width: 1800px) {
+  :root {
+    --infinite-spiral-card-width: 380px;
+    --infinite-spiral-card-height: 520px;
+    --infinite-spiral-card-radius: 24px;
+  }
+
+  .infinite-spiral {
+    perspective: 1600px;
+  }
+}
+
+/* =========================================================
+   📱 MOBILE & TABLET RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 768px) {
+  :root {
+    --infinite-spiral-card-width: 220px;
+    --infinite-spiral-card-height: 300px;
+    --infinite-spiral-card-radius: 14px;
+  }
+
+  .infinite-spiral {
+    perspective: 900px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --infinite-spiral-card-width: 180px;
+    --infinite-spiral-card-height: 250px;
+    --infinite-spiral-card-radius: 12px;
+  }
+
+  .infinite-spiral {
+    perspective: 700px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

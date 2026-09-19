@@ -4,15 +4,32 @@ import './contact.css';
 
 const Contact = () => {
   const handleContactSubmit = async e => {
-    // Retain your existing submit logic
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await axios.post('http://localhost:5000/api/contact', data);
+      alert(
+        res.data.method === 'mongodb'
+          ? 'Message saved to database!'
+          : 'Database offline: Message sent via Gmail!'
+      );
+      e.target.reset();
+    } catch (err) {
+      alert('Failed to send message.');
+    }
   };
 
   return (
     <section id="contact" className="section contact-section">
-      <div className="contact-bg-gif">
-        <img src="/Chaisaw HI.gif" alt="Background GIF" />
+      {/* Responsive GIF container above text */}
+      <div className="contact-gif-container">
+        <img src="/Chaisaw HI.gif" alt="Chainsaw Greeting GIF" />
       </div>
+
       <h2>Connect With Me</h2>
+
       <form onSubmit={handleContactSubmit} className="contact-form glass-card">
         <div className="form-row">
           <input
@@ -60,4 +77,5 @@ const Contact = () => {
     </section>
   );
 };
+
 export default Contact;

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
-  const { activeSection: contextActiveSection, scrollToSection, setActiveSection } = useContext(PortfolioContext);
+  const { scrollToSection, setActiveSection } = useContext(PortfolioContext);
   const [localActiveSection, setLocalActiveSection] = useState('home');
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -20,23 +20,19 @@ const Navbar = () => {
     'contact',
   ];
 
-  // The active section used for rendering the active-bubble
   const activeSection = localActiveSection;
 
-  // Sync context if available
-  const updateActiveSection = (item) => {
+  const updateActiveSection = item => {
     setLocalActiveSection(item);
     if (setActiveSection) {
       setActiveSection(item);
     }
   };
 
-  // Scroll detection to update the navbar bubble automatically
   useEffect(() => {
     if (location.pathname !== '/') return;
 
     const handleScroll = () => {
-      // Offset position for header height
       const scrollPosition = window.scrollY + 250;
 
       for (let i = navItems.length - 1; i >= 0; i--) {
@@ -52,12 +48,12 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Trigger once on mount
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [location.pathname]);
 
-  const handleNavClick = (item) => {
+  const handleNavClick = item => {
     setIsOpen(false);
     updateActiveSection(item);
 
@@ -71,18 +67,15 @@ const Navbar = () => {
 
   return (
     <nav className="glass-navbar">
-      <div 
-        className="nav-logo" 
-        onClick={() => handleNavClick('home')} 
-        style={{ cursor: 'pointer' }}
-      >
+      {/* Combined Left Brand Container */}
+      <div className="nav-brand" onClick={() => handleNavClick('home')}>
         <img src="/Jeffin.jpg" alt="JEFFIN James" className="nav-avatar" />
+        <span className="brand-title">JEFFIN JAMES</span>
       </div>
-      <span>JEFFIN JAMES</span>
 
-      {/* Desktop Navigation */}
+      {/* Desktop Navigation Links */}
       <div className="nav-links desktop-menu">
-        {navItems.map((item) => (
+        {navItems.map(item => (
           <button
             key={item}
             className={`nav-item ${activeSection === item ? 'active' : ''}`}
@@ -92,7 +85,12 @@ const Navbar = () => {
               <motion.div
                 layoutId="bubble"
                 className="active-bubble"
-                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 450,
+                  damping: 35,
+                  mass: 0.5,
+                }}
               />
             )}
             <span
@@ -108,6 +106,7 @@ const Navbar = () => {
         ))}
       </div>
 
+      {/* Desktop Action Button */}
       <div className="desktop-menu">
         <Link to="/hire-me" className="btn-primary glass-btn">
           Hire me
@@ -129,7 +128,7 @@ const Navbar = () => {
             transition={{ duration: 0.2 }}
             className="mobile-dropdown glass-card"
           >
-            {navItems.map((item) => (
+            {navItems.map(item => (
               <button
                 key={item}
                 onClick={() => handleNavClick(item)}
