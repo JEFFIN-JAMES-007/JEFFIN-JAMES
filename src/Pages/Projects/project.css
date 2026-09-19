@@ -1,0 +1,119 @@
+/* ===================================================
+   🔍 CENTER ZOOM & BACKGROUND BLUR OVERLAY
+   =================================================== */
+
+.image-zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  background: rgba(13, 9, 20, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  cursor: zoom-out;
+  animation: backdropFadeIn 0.3s ease-out forwards;
+}
+
+.zoomed-image-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 85vh;
+  cursor: zoom-out;
+  animation: centerZoomIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.zoomed-image {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8),
+              0 0 35px rgba(106, 53, 255, 0.45);
+  transition: transform 0.3s ease;
+}
+
+.zoomed-caption {
+  margin-top: 15px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.zoomed-caption h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.zoomed-caption p {
+  color: var(--accent-purple);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.zoom-close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--glass-border);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.zoom-close-btn:hover {
+  background: var(--accent-purple);
+  transform: scale(1.1) rotate(90deg);
+}
+
+/* Animations */
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes centerZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.65);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --- MOBILE RESPONSIVENESS FOR ZOOM --- */
+@media (max-width: 768px) {
+  .zoomed-image {
+    max-height: 65vh;
+  }
+  .zoom-close-btn {
+    top: -10px;
+    right: -10px;
+    width: 32px;
+    height: 32px;
+  }
+  .zoomed-caption h3 {
+    font-size: 1.1rem;
+  }
+}
