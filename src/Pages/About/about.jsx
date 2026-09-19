@@ -1,3 +1,5 @@
+import './about.css'
+
 const About = () => {
   return (<section id="about" className="section">
         <h2>Learn More About Me</h2>

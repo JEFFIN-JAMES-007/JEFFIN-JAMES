@@ -3,6 +3,7 @@ import { PortfolioProvider } from './Context/PortfolioContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+
 // Pages
 import Home from './Pages/Home/home.jsx';
 import About from './Pages/About/about';

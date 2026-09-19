@@ -17,7 +17,8 @@
 }
 
 /* --- RESPONSIVE 100% FIT FIX --- */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -80,8 +81,9 @@ html, body {
 /* --- 3D GLASS NAVBAR & NEON GLOW --- */
 .glass-navbar:hover {
   background: rgba(106, 53, 255, 0.15); /* Neon purple tint */
-  box-shadow: 0 0 25px rgba(106, 53, 255, 0.7), 
-              inset 0 0 15px rgba(106, 53, 255, 0.4);
+  box-shadow:
+    0 0 25px rgba(106, 53, 255, 0.7),
+    inset 0 0 15px rgba(106, 53, 255, 0.4);
   border-color: rgba(106, 53, 255, 0.6);
   transform: translateX(-50%) translateY(-2px); /* Slight 3D lift */
 }
@@ -129,8 +131,9 @@ html, body {
 
 .nav-item.active span {
   color: #ffffff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-               0 0 20px var(--accent-purple);
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px var(--accent-purple);
   font-weight: 600;
 }
 
@@ -237,63 +240,7 @@ html, body {
   gap: 15px;
 }
 
-/* ABOUT TERMINAL */
-.about-container {
-  display: flex;
-  gap: 40px;
-  align-items: stretch;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.about-img {
-  width: 300px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-.terminal-card {
-  flex: 1;
-  font-family: 'Fira Code', monospace;
-  font-size: 14px;
-  background: #12101b;
-}
-.terminal-header {
-  background: #1a1825;
-  padding: 10px 15px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  border-radius: 16px 16px 0 0;
-  color: #666;
-}
-.dots span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-.dots .red {
-  background: #ff5f56;
-}
-.dots .yellow {
-  background: #ffbd2e;
-}
-.dots .green {
-  background: #27c93f;
-}
-.terminal-body {
-  padding: 20px;
-  color: #a485ff;
-}
-.terminal-body pre {
-  color: #e1b12c;
-  margin: 15px 0;
-  white-space: pre-wrap;
-}
-.command {
-  color: #44bd32;
-  margin-bottom: 10px;
-}
+
 
 /* SECTIONS */
 .section {
@@ -308,155 +255,6 @@ html, body {
 }
 
 
-/* CONTACT FORM & INTERACTIVE BG */
-.contact-section {
-  position: relative;
-  overflow: hidden;
-}
-.contact-bg-gif img {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 1.5rem 1.5rem 0 0;
-}
-
-/* Tablet Screens (<= 768px) */
-@media (max-width: 768px) {
-  .contact-bg-gif {
-    max-width: 88%;
-  }
-
-  .contact-bg-gif img {
-    max-height: 280px;
-    border-radius: 1rem 1rem 0 0;
-  }
-}
-
-/* Mobile Screens (<= 480px) */
-@media (max-width: 480px) {
-  .contact-bg-gif {
-    max-width: 95%;
-  }
-
-  .contact-bg-gif img {
-    max-height: 210px;
-    border-radius: 1rem 1rem 0 0;
-  }
-}
-.interactive-bg {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(
-    circle,
-    rgba(106, 53, 255, 0.2) 0%,
-    transparent 70%
-  );
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  filter: blur(50px);
-  z-index: -1;
-  animation: pulse 6s infinite alternate;
-}
-@keyframes pulse {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.5);
-  }
-}
-.contact-form {
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background: rgba(20, 15, 30, 0.7);
-}
-.form-row {
-  display: flex;
-  gap: 20px;
-}
-.glass-input {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--glass-border);
-  padding: 15px;
-  border-radius: 8px;
-  color: white;
-  font-family: 'Inter';
-  outline: none;
-  transition: 0.3s;
-}
-.glass-input:focus {
-  border-color: var(--accent-purple);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* PRICING PAGE (Hire Me) */
-.pricing-page {
-  padding: 150px 20px 100px;
-  min-height: 100vh;
-  text-align: center;
-}
-.pricing-header p {
-  color: var(--text-muted);
-  margin: 10px 0 40px;
-}
-.pricing-cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.price-card {
-  padding: 40px;
-  width: 300px;
-  text-align: left;
-  position: relative;
-}
-.pro-card {
-  border-color: var(--accent-purple);
-  box-shadow: 0 0 30px rgba(106, 53, 255, 0.2);
-}
-.popular-badge {
-  position: absolute;
-  top: -15px;
-  right: 20px;
-  background: var(--accent-pink);
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
-}
-.price-card h3 {
-  color: var(--text-muted);
-  font-size: 1.2rem;
-}
-.price-card .price {
-  font-size: 3rem;
-  margin: 15px 0;
-}
-.price-card ul {
-  list-style: none;
-  margin-bottom: 30px;
-}
-.price-card ul li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-  color: #d1d1d1;
-  font-size: 14px;
-}
-.price-card button {
-  width: 100%;
-  justify-content: center;
-}
 
 /* FOOTER */
 .footer {
@@ -655,60 +453,6 @@ html, body {
   font-weight: 600;
 }
 
-/* --- PARALLAX GALLERY PAGE (/works) --- */
-.gallery-page {
-  padding: 150px 20px 100px;
-  max-width: 1200px;
-  margin: 0 auto;
-  min-height: 100vh;
-}
-.gallery-header {
-  text-align: center;
-  margin-bottom: 80px;
-}
-.gallery-header h1 {
-  font-size: 3.5rem;
-  margin-bottom: 15px;
-}
-.parallax-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 Columns for Parallax */
-  gap: 40px;
-  padding-bottom: 100px;
-}
-.parallax-card {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.parallax-img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-.parallax-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-}
-.parallax-info p {
-  color: var(--text-muted);
-}
-
-/* Responsive updates for the Gallery */
-@media (max-width: 768px) {
-  .parallax-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
-  }
-  .parallax-card {
-    transform: none !important; /* Disable parallax transform on mobile for better UX */
-  }
-  .img-wrapper {
-    height: 200px;
-  }
-}
-
 /* =========================================
    📱 COMPREHENSIVE MOBILE RESPONSIVENESS
    ========================================= */
@@ -904,8 +648,7 @@ html, body {
     top: clamp(70px, 12vh, 120px);
     font-size: 0.9rem;
   }
-    /* .gallery-nav h2 {
+  /* .gallery-nav h2 {
     font-size: 1.2rem;
   } */
 }
-

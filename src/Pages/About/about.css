@@ -1,0 +1,57 @@
+/* ABOUT TERMINAL */
+.about-container {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.about-img {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.terminal-card {
+  flex: 1;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  background: #12101b;
+}
+.terminal-header {
+  background: #1a1825;
+  padding: 10px 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 16px 16px 0 0;
+  color: #666;
+}
+.dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.dots .red {
+  background: #ff5f56;
+}
+.dots .yellow {
+  background: #ffbd2e;
+}
+.dots .green {
+  background: #27c93f;
+}
+.terminal-body {
+  padding: 20px;
+  color: #a485ff;
+}
+.terminal-body pre {
+  color: #e1b12c;
+  margin: 15px 0;
+  white-space: pre-wrap;
+}
+.command {
+  color: #44bd32;
+  margin-bottom: 10px;
+}

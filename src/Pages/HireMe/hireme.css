@@ -1,0 +1,61 @@
+/* PRICING PAGE (Hire Me) */
+.pricing-page {
+  padding: 150px 20px 100px;
+  min-height: 100vh;
+  text-align: center;
+}
+.pricing-header p {
+  color: var(--text-muted);
+  margin: 10px 0 40px;
+}
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.price-card {
+  padding: 40px;
+  width: 300px;
+  text-align: left;
+  position: relative;
+}
+.pro-card {
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 30px rgba(106, 53, 255, 0.2);
+}
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: var(--accent-pink);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.price-card h3 {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+.price-card .price {
+  font-size: 3rem;
+  margin: 15px 0;
+}
+.price-card ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+.price-card ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #d1d1d1;
+  font-size: 14px;
+}
+.price-card button {
+  width: 100%;
+  justify-content: center;
+}

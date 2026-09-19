@@ -7,7 +7,7 @@ const projectsData = [
     id: 1,
     title: 'Blueberry Lemonade Poster',
     category: 'Graphic Design & Poster',
-    img: 'Project Images/BLUEBERRY LEMONADE 🍋.jpg',
+    img: 'Project Images/blueberry-lemonade.jpg',
   },
   {
     id: 2,
