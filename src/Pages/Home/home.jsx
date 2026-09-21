@@ -6,7 +6,7 @@ import { Download, ExternalLink } from 'lucide-react';
 
 import SplitFlapText from '../../components/SplitFlapText';
 import ScrollReveal from '../../components/ScrollReveal';
-
+import GradientText from '../../components/GradientText';
 
 import './home.css';
 // import axios from 'axios';
@@ -52,12 +52,23 @@ const Home = () => {
               />{' '}
               Video Editor & Graphic Designer
             </div> */}
-          
+
             {/* Split Flap Effect for Heading */}
-            <div style={{ margin: '20px 0', display: 'flex', justifyContent: 'center' }}>
+            <div
+              style={{
+                margin: '20px 0',
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
               <SplitFlapText
-                words={['I AM JEFFIN', 'VIDEO EDITOR', 'UI/UX DESIGNER', 'WEB DEVELOPER']}
-                flipDuration={0.10}
+                words={[
+                  'I AM JEFFIN',
+                  'VIDEO EDITOR',
+                  'UI/UX DESIGNER',
+                  'WEB DEVELOPER',
+                ]}
+                flipDuration={0.1}
                 stagger={0.05}
                 cycleDelay={1500}
                 charset="alphanumeric"
@@ -70,13 +81,32 @@ const Home = () => {
                 padTo={14}
               />
             </div>
-              <h1>
-              I CREATE VISUALS
-              <br />
-              <span className="gradient-text">THAT MAKE PEOPLE</span>
-              <br />
-              <span className="gradient-text-pink">STOP.</span>
-            </h1>
+            {/* Replaced heading with GradientText */}
+            {/* Animated Gradient Title */}
+            {/* <div style={{ margin: '1.5rem 0' }}> */}
+              <GradientText
+                colors={['#5227FF', '#a900e8', '#e003ed']}
+                animationSpeed={2}
+                showBorder={false}
+                className="hero-gradient-title"
+              >
+                <span
+                  style={{
+                    display: 'block',
+                    fontSize: 'clamp(1.8rem, 4vw, 3rem)',
+                    lineHeight: 1.2,
+                    fontWeight: 700,
+                    textAlign: 'center',
+                  }}
+                >
+                  I CREATE VISUALS
+                  <br />
+                  THAT MAKE PEOPLE
+                  <br />
+                  STOP.
+                </span>
+              </GradientText>
+            {/* </div> */}
             {/* Scroll Reveal Effect for Subtitle Paragraph */}
             <ScrollReveal
               baseOpacity={0.1}
@@ -85,7 +115,12 @@ const Home = () => {
               blurStrength={8}
               textClassName="hero-reveal-text"
             >
-              A video editor, graphic designer, and full-stack web developer turning creative ideas into striking visual experiences.
+              I am a video editor, graphic designer, and full-stack web
+              developer dedicated to shaping stories that stand out. By blending
+              technical precision with artistic vision, I build immersive visual
+              content and responsive web solutions. From concept to code and
+              final cut, I turn creative ideas into memorable experiences that
+              leave a lasting impression.
             </ScrollReveal>
             <div className="hero-buttons">
               <Link
