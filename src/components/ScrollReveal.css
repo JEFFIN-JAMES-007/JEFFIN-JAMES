@@ -1,0 +1,22 @@
+.scroll-reveal {
+  margin: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.scroll-reveal-text {
+  font-size: clamp(
+    0.95rem,
+    2.2vw,
+    1.25rem
+  ); /* Perfectly scales down on phones */
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-muted, #a09eb1);
+  word-break: break-word;
+}
+
+.word {
+  display: inline-block;
+  white-space: pre; /* Keeps word spacing intact during GSAP reveal */
+}

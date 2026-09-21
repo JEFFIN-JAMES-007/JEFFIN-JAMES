@@ -6,7 +6,7 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --text-main: #ffffff;
   --text-muted: #a09eb1;
-  --accent-purple: #6a35ff;
+  --accent-purple: #5b3ab4;
   --accent-pink: #ff54a2;
 }
 
@@ -83,16 +83,20 @@ body {
   border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.12));
   border-radius: 50px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.3s ease;
   box-sizing: border-box;
 }
 
 /* Entire Navbar Neon Purple Glow on Hover */
 .glass-navbar:hover {
   border-color: rgba(106, 53, 255, 0.6);
-  box-shadow: 0 0 25px rgba(106, 53, 255, 0.45),
-              0 0 50px rgba(106, 53, 255, 0.2),
-              0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 0 25px rgba(106, 53, 255, 0.45),
+    0 0 50px rgba(106, 53, 255, 0.2),
+    0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* --- Brand Section (Left Side) --- */
@@ -112,7 +116,9 @@ body {
   object-fit: cover;
   border: 2px solid var(--accent-purple, #6a35ff);
   box-shadow: 0 0 10px rgba(106, 53, 255, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .nav-brand:hover .nav-avatar {
@@ -229,7 +235,9 @@ body {
   font-weight: 600;
   border-radius: 12px;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .mobile-nav-item:hover {
@@ -241,57 +249,6 @@ body {
   margin-top: 8px;
   width: 100%;
   justify-content: center;
-}
-
-/* =========================================================
-   🖥️ & 📱 RESPONSIVE BREAKPOINTS
-   ========================================================= */
-
-@media (max-width: 1200px) and (min-width: 1081px) {
-  .nav-item {
-    padding: 10px 18px;
-  }
-  .glass-navbar {
-    padding: 10px 18px;
-  }
-}
-
-@media (max-width: 1080px) {
-  .desktop-menu {
-    display: none !important;
-  }
-
-  .mobile-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .glass-navbar {
-    padding: 10px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .glass-navbar {
-    top: 12px;
-    width: 94%;
-    padding: 8px 16px;
-  }
-
-  .nav-avatar {
-    width: 36px;
-    height: 36px;
-  }
-
-  .brand-title {
-    font-size: 0.95rem;
-  }
-
-  .mobile-dropdown {
-    width: 100%;
-    top: 65px;
-  }
 }
 
 /* --- BUTTONS --- */
@@ -414,179 +371,6 @@ body {
   font-size: clamp(2rem, 3.5vw, 3rem);
 }
 
-/* About Section */
-.about-container {
-  display: flex;
-  gap: 30px;
-  align-items: stretch;
-}
-
-.about-img {
-  width: 320px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-.terminal-card {
-  flex: 1;
-  padding: 20px;
-}
-
-.terminal-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 15px;
-  color: var(--text-muted);
-  font-size: 14px;
-}
-
-.terminal-header .dots {
-  display: flex;
-  gap: 6px;
-}
-
-.dots span {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-}
-
-.dots .red { background: #ff5f56; }
-.dots .yellow { background: #ffbd2e; }
-.dots .green { background: #27c93f; }
-
-.terminal-body {
-  font-family: 'Fira Code', monospace;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.terminal-body .command {
-  color: var(--accent-pink);
-  margin: 10px 0 5px;
-}
-
-.terminal-body pre {
-  color: #a78bfa;
-  white-space: pre-wrap;
-}
-
-/* Skills Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-}
-
-.skill-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 18px 22px;
-  font-weight: 600;
-  font-size: 15px;
-}
-
-/* Services Grid */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.service-card {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.service-card h3 {
-  font-size: 1.25rem;
-}
-
-.service-card p {
-  color: var(--text-muted);
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-/* Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-}
-
-.project-card {
-  padding: 0;
-  overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-  cursor: pointer;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(106, 53, 255, 0.2);
-  border-color: rgba(106, 53, 255, 0.5);
-}
-
-.img-wrapper {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  overflow: hidden;
-}
-
-.img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.project-card:hover .img-wrapper img {
-  transform: scale(1.1);
-}
-
-.hover-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(13, 9, 20, 0.6);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .hover-overlay {
-  opacity: 1;
-}
-
-.project-info {
-  padding: 22px;
-  border-top: 1px solid var(--glass-border);
-}
-
-.project-info h3 {
-  font-size: 1.15rem;
-  margin-bottom: 6px;
-  color: #ffffff;
-}
-
-.project-info p {
-  color: var(--accent-purple);
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
 /* --- CONTACT SECTION & GIF BACKDROP --- */
 .contact-section {
   position: relative;
@@ -654,11 +438,19 @@ body {
   max-height: 380px;
   object-fit: cover;
   border-radius: 1.5rem 1.5rem 0 0;
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
-/* --- FOOTER --- */
+/* --- FOOTER ---
 .footer {
   display: flex;
   justify-content: space-between;
@@ -694,7 +486,7 @@ body {
 .about-gif {
   width: 96px;
   height: auto;
-}
+} */
 
 /* --- INFINITE SPIRAL GALLERY PAGE --- */
 .infinite-gallery-container {
@@ -831,10 +623,110 @@ body {
 }
 
 /* =========================================================
-   📱 MOBILE & TABLET RESPONSIVENESS
+   📱 TABLET & MOBILE BREAKPOINTS
    ========================================================= */
 
+/* --- TABLET VIEW (769px to 1080px): Keeps Horizontal Desktop Navbar Compact --- */
+@media (max-width: 1080px) and (min-width: 769px) {
+  .glass-navbar {
+    width: 96%;
+    padding: 8px 16px;
+  }
+
+  .nav-brand {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+  }
+
+  .nav-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-links {
+    gap: 2px;
+    padding: 3px;
+  }
+
+  .nav-item {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .desktop-menu {
+    display: flex !important;
+    gap: 10px;
+  }
+
+  .mobile-toggle {
+    display: none !important;
+  }
+
+  .glass-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* --- MOBILE VIEW (768px and below): Switches to Hamburger Dropdown --- */
 @media (max-width: 768px) {
+  .desktop-menu {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .glass-navbar {
+    padding: 10px 20px;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .mobile-dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    max-width: 280px;
+    padding: 20px;
+    gap: 12px;
+    z-index: 999;
+    background: rgba(15, 10, 25, 0.92);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+
+  .mobile-nav-item {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    padding: 10px 14px;
+    border-radius: 12px;
+    transition: 0.25s ease;
+  }
+
+  .mobile-nav-item:hover,
+  .mobile-nav-item:active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
   .hero {
     padding-top: 100px;
   }
@@ -859,58 +751,6 @@ body {
     width: 100%;
     justify-content: center;
     padding: 15px;
-  }
-
-  .desktop-menu {
-    display: none !important;
-  }
-
-  .glass-navbar {
-    padding: 15px 25px;
-    width: 90%;
-    justify-content: space-between;
-  }
-
-  .mobile-toggle {
-    display: flex;
-    align-items: center;
-  }
-
-  .mobile-dropdown {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 75px;
-    right: 0;
-    width: 260px;
-    padding: 20px;
-    gap: 15px;
-    z-index: 999;
-    background: rgba(15, 10, 25, 0.85);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    border-radius: 16px;
-  }
-
-  .mobile-nav-item {
-    background: transparent;
-    border: none;
-    color: var(--text-muted);
-    font-size: 16px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    text-align: left;
-    cursor: pointer;
-    padding: 12px 15px;
-    border-radius: 12px;
-    transition: 0.3s;
-  }
-
-  .mobile-nav-item:hover,
-  .mobile-nav-item:active {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
   }
 
   .about-container {
@@ -975,6 +815,7 @@ body {
   }
 }
 
+/* --- EXTRA SMALL MOBILE SCREEN (480px and below) --- */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.8rem;
@@ -985,12 +826,75 @@ body {
     padding: 10px 15px;
   }
 
+  .nav-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-title {
+    font-size: 0.95rem;
+  }
+
   .mobile-dropdown {
     width: 100%;
-    top: 70px;
+    top: 65px;
   }
 
   .contact-bg-gif img {
     max-height: 210px;
+  }
+}
+/* =========================================================
+   📱 ULTRA-SMALL MOBILE / iPHONE SE (380px and below)
+   ========================================================= */
+
+@media (max-width: 380px) {
+  /* Compact Navbar pill for 320px–375px screens */
+  .glass-navbar {
+    width: 96%;
+    padding: 8px 10px;
+    top: 10px;
+  }
+
+  .nav-brand {
+    gap: 8px;
+  }
+
+  .nav-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-title {
+    font-size: 0.82rem;
+    letter-spacing: 0.2px;
+  }
+
+  .mobile-toggle {
+    padding: 4px;
+  }
+
+  /* Dropdown full fit for narrow displays */
+  .mobile-dropdown {
+    top: 58px;
+    right: -8px;
+    width: calc(100vw - 28px);
+    max-width: 290px;
+    padding: 14px;
+    gap: 8px;
+  }
+
+  .mobile-nav-item {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  /* Typography scale-down to prevent line breaking */
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.88rem;
   }
 }

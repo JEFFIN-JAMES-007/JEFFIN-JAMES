@@ -1,3 +1,80 @@
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  padding: 0;
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(106, 53, 255, 0.2);
+  border-color: rgba(106, 53, 255, 0.5);
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .img-wrapper img {
+  transform: scale(1.1);
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 9, 20, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .hover-overlay {
+  opacity: 1;
+}
+
+.project-info {
+  padding: 22px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.project-info h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.project-info p {
+  color: var(--accent-purple);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
 /* ===================================================
    🔍 CENTER ZOOM & BACKGROUND BLUR OVERLAY
    =================================================== */
@@ -37,10 +114,12 @@
   object-fit: contain;
   border-radius: 16px;
   border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.18));
-  box-shadow: 
+  box-shadow:
     0 20px 50px rgba(0, 0, 0, 0.8),
     0 0 35px rgba(106, 53, 255, 0.45);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .zoomed-caption {
@@ -91,8 +170,12 @@
 
 /* Keyframes */
 @keyframes backdropFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes centerZoomIn {

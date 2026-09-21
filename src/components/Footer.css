@@ -1,0 +1,141 @@
+/* Footer Glassmorphism Container */
+.footer.glass-footer {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background: rgba(21, 16, 33, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 159, 252, 0.15);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+  color: #f3f2f7;
+  position: relative;
+  z-index: 10;
+}
+
+/* Inner Layout Alignment */
+.footer-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Typography Style */
+.footer-info p {
+  font-size: 0.9rem;
+  color: rgba(243, 242, 247, 0.7);
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Animated GIF Presentation */
+.footer-gif-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-gif {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255, 159, 252, 0.3));
+  animation: floatGif 3s ease-in-out infinite;
+}
+
+@keyframes floatGif {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Social Media Icons Layout */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Interactive Glass Icons */
+.glass-icon {
+  width: 48px;
+  height: 48px;
+  padding: 6px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.glass-icon:hover {
+  transform: translateY(-4px) scale(1.08);
+  background: rgba(255, 159, 252, 0.15);
+  border-color: rgba(255, 159, 252, 0.4);
+  box-shadow: 0 6px 15px rgba(255, 159, 252, 0.25);
+}
+
+/* Responsive Layout for Mobile Devices & iPhone SE */
+@media (max-width: 768px) {
+  .footer.glass-footer {
+    padding: 1.2rem 1rem;
+  }
+
+  .footer-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-info {
+    order: 3; /* Push copyright text to the bottom on mobile */
+  }
+
+  .footer-gif-container {
+    order: 1;
+  }
+
+  .social-links {
+    order: 2;
+    justify-content: center;
+  }
+}
+
+/* Footer Clock Wrapper */
+.footer-clock-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 159, 252, 0.15);
+  max-width: 100%;
+  box-sizing: content-box;
+  /* overflow: hidden; */
+}
+
+/* Responsive Scaling for Mobile Screens & iPhone SE */
+@media (max-width: 480px) {
+  .footer-clock-container {
+    padding: 4px 8px;
+    /* Scales down the entire clock wrapper smoothly on mobile screens */
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+}
+
+/* Strict scaling for ultra-narrow devices like iPhone SE (320px - 375px) */
+@media (max-width: 380px) {
+  .footer-clock-container {
+    transform: scale(0.72);
+    margin: -6px 0; /* Recovers vertical spacing lost by scaling */
+  }
+}
